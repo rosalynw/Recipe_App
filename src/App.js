@@ -19,7 +19,8 @@ function App() {
 
   //post functionality
   const newRecipe = (createRecipe) => 
-  setRecipes((currentRecipe) => [createRecipe, ...currentRecipe])
+  console.log(createRecipe);
+  setRecipes((currentRecipe) => [...currentRecipe, createRecipe])
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
