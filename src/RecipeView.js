@@ -4,7 +4,6 @@ import React from "react";
 //should have props for recipe uploading
 //should be one row
 function ReceipeView({recipe, deleteRecipe}) {
-
     return(
       
             <tr className="recipeView">

@@ -28,7 +28,6 @@ function RecipeCreate({newRecipe}) {
           <tr>
             <td className="item">
               <input
-                
                 id="name"
                 type="text"
                 name="name"
