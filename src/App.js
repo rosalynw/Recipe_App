@@ -9,13 +9,16 @@ function App() {
 
   // TODO: Add the ability for the <RecipeList /> component to list and delete an existing recipe.
   // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
+  // deletbutton functionality should be here
+  // newRecipe info should be here
+  // RecipeData contains premade recipes within an array. could be part of testing
 
-  
+  const newRecipe = (createRecipe) => setRecipes((currentRecipe) => [createRecipe, ...currentRecipe])
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
       <RecipeList />
-      <RecipeCreate />
+      <RecipeCreate newRecipe={newRecipe} />
     </div>
   );
 }
