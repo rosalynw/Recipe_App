@@ -1,6 +1,6 @@
 import React from "react";
 import ReceipeView from "./RecipeView";
-import "./RecipeList.css"
+
 
 function RecipeList({recipes, deleteRecipe}) {
   
@@ -14,11 +14,11 @@ function RecipeList({recipes, deleteRecipe}) {
       <table>
         <thead>
           <tr>
-            <th className="head">Name</th>
-            <th className="head">Cuisine</th>
-            <th className="head">Photo</th>
-            <th className="head-2">Ingredients</th>
-            <th className="head-2">Preparation</th>
+            <th className="item">Name</th>
+            <th className="item">Cuisine</th>
+            <th className="item">Photo</th>
+            <th className="item">Ingredients</th>
+            <th className="item">Preparation</th>
             <th className="actions">Actions</th>
           </tr>
         </thead>

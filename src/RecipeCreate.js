@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./RecipeCreate.css";
 
 function RecipeCreate({newRecipe}) {
 
@@ -27,8 +26,9 @@ function RecipeCreate({newRecipe}) {
       <table>
         <tbody>
           <tr>
-            <td>
+            <td className="item">
               <input
+                
                 id="name"
                 type="text"
                 name="name"
@@ -38,7 +38,7 @@ function RecipeCreate({newRecipe}) {
                 placeholder="Name"
               />
             </td>
-            <td>
+            <td className="item">
               <input
                 id="cuisine"
                 type="text"
@@ -49,7 +49,7 @@ function RecipeCreate({newRecipe}) {
                 placeholder="Cuisine"
               />
             </td>
-            <td>
+            <td className="item">
               <input
                 id="photo"
                 type="url"
@@ -59,9 +59,8 @@ function RecipeCreate({newRecipe}) {
                 value={content.photo}
               />
             </td>
-            <td className="head-2">
+            <td className="item">
               <textarea
-              
                 id="ingredients"
                 name="ingredients"
                 value={content.ingredients}
@@ -69,9 +68,8 @@ function RecipeCreate({newRecipe}) {
                 placeholder="Ingredients"
               />
             </td>
-            <td className="head-2">
+            <td className="item">
               <textarea
-          
                 id="preparation"
                 name="preparation"
                 value={content.preparation}
