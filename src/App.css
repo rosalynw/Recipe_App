@@ -12,11 +12,14 @@ label {
 header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   font-family: 'Times New Roman', Times, serif;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-variant: small-caps;
   font-size: 46px;
   border: 1px solid gray;
   margin: 0;
+  height: 180px;
 }
 
 /* typography */
@@ -53,6 +56,8 @@ table {
   border-collapse: collapse;
   overflow:hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  
+  border: 1px solid gray;
 }
 
 .content_td p {
@@ -60,9 +65,26 @@ table {
   max-height: 100px;
   overflow-y: auto;
   text-overflow: ellipsis;
+  
 }
 
 /* Column Size for thead */
 
 
 /* Column size for tbody */
+tbody {
+  
+  width: 10%;
+}
+
+img {
+  width: 100%;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: burlywood;
+}
+
+.recipe-list > table {
+  margin-top: 30px;
+}

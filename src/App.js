@@ -12,12 +12,18 @@ function App() {
   // deletbutton functionality should be here
   // newRecipe info should be here
   // RecipeData contains premade recipes within an array. could be part of testing
+  
+  //delete funtionality
+  const deleteRecipe = (indexToDelete) => 
+  setRecipes((currentRecipe) => currentRecipe.filter((recipe, index) => index !== indexToDelete));
 
-  const newRecipe = (createRecipe) => setRecipes((currentRecipe) => [createRecipe, ...currentRecipe])
+  //post functionality
+  const newRecipe = (createRecipe) => 
+  setRecipes((currentRecipe) => [createRecipe, ...currentRecipe])
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
-      <RecipeList />
+      <RecipeList recipes={recipes} deleteRecipe={deleteRecipe} />
       <RecipeCreate newRecipe={newRecipe} />
     </div>
   );

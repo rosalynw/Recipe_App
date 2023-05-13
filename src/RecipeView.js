@@ -10,7 +10,7 @@ function ReceipeView({recipe, deleteRecipe}) {
             <tr className="recipeView">
                 <td>{recipe.name}</td>
                 <td>{recipe.cuisine}</td>
-                <td>{recipe.photo}</td>
+                <td><img src={recipe.photo} alt="" /></td>
                 <td>{recipe.ingredients}</td>
                 <td>{recipe.preparation}</td>
                 <td><button type="submit" onClick={deleteRecipe}>Delete</button></td>

@@ -12,15 +12,16 @@ function RecipeCreate({newRecipe}) {
   const handleChange = (event) => setContent({...content, [event.target.name]: event.target.value});
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    const name = formData.get("name");
-    const cuisine = formData.get("cuisine");
-    const photo = formData.get("photo");
-    const ingredients = formData.get("ingredients");
-    const preparation = formData.get("preparation");
-    newRecipe({name, cuisine, photo, ingredients, preparation});
-    event.target.reset();
-  }
+    newRecipe(content);
+    setContent({
+      name: "",
+      cuisine: "",
+      photo: "",
+      ingredients: "",
+      preparation: ""
+    });
+  };
+
   return (
     <form name="create" onSubmit={handleSubmit}>
       <table>
@@ -28,55 +29,54 @@ function RecipeCreate({newRecipe}) {
           <tr>
             <td>
               <input
-              className="table-item"
-              id="name"
-              type="text"
-              name="name"
-              onChange={handleChange}
-              value={content.name}
-              required={true}
-              placeholder="Name"/>
-            </td>
-            <td>
-              <input
-              className="table-item"
-              id="cuisine"
-              type="text"
-              name="cuisine"
-              onChange={handleChange}
-              value={content.cuisine}
-              required={true}
-              placeholder="Cuisine"
+                id="name"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={content.name}
+                required={true}
+                placeholder="Name"
               />
             </td>
             <td>
               <input
-              className="table-item"
-              id="photo"
-              type="url"
-              name="photo"
-              placeholder="URL"
-              onChange={handleChange}
+                id="cuisine"
+                type="text"
+                name="cuisine"
+                onChange={handleChange}
+                value={content.cuisine}
+                required={true}
+                placeholder="Cuisine"
               />
             </td>
             <td>
-              <textarea
-              className="table-item"
-              id="ingredients"
-              name="ingredients"
-              value={content.ingredients}
-              onChange={handleChange}
-              placeholder="Ingredients"
+              <input
+                id="photo"
+                type="url"
+                name="photo"
+                placeholder="URL"
+                onChange={handleChange}
+                value={content.photo}
               />
             </td>
-            <td>
+            <td className="head-2">
               <textarea
-              className="table-item"
-              id="preparation"
-              name="preparation"
-              value={content.preparation}
-              onChange={handleChange}
-              placeholder="Preparation"
+              
+                id="ingredients"
+                name="ingredients"
+                value={content.ingredients}
+                onChange={handleChange}
+                placeholder="Ingredients"
+              />
+            </td>
+            <td className="head-2">
+              <textarea
+          
+                id="preparation"
+                name="preparation"
+                value={content.preparation}
+                onChange={handleChange}
+                placeholder="Preparation"
               />
             </td>
             <td>
